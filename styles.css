@@ -1,0 +1,76 @@
+
+
+
+body {
+    background-image: url("kotor.jpg");
+  
+ }
+
+.question {
+text-align: center;
+color: red;
+font-weight: bold;
+
+}
+
+
+
+.choices {
+   
+text-align: center;
+
+}
+
+
+
+
+.wins {
+
+
+}
+
+.timer {
+    color: red;
+    font-weight: bold;
+
+    border: 5px solid black;
+    width: 500px;
+    height: 100px;
+    margin-left: auto;
+margin-right: auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 45px;
+
+
+}
+
+
+
+
+
+.losses {
+
+
+}
+
+
+#answerArea {
+
+margin-left: auto;
+margin-right: auto;
+
+}
+
+
+#WandL {
+    color: white;
+    font-weight: bold;
+    border: 5px solid black;
+width: 500px;
+height: 200px;
+
+}
+
+
+
