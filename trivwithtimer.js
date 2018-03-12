@@ -4,6 +4,7 @@ $(document).ready(function() {
         var incorrect = 0;
         var counter = 0;
         var timeLeft = 30;
+        var x = 0;
       
       var game = {
           questionCounter: 0,
@@ -270,32 +271,27 @@ function timeIt() {
 
 
 
-
     if ((timeLeft-counter) <= 0) {
-
+        clearInterval(x);
+    
         alert("Out of time... incorrect");
         incorrect++;
-
+    
         game.questionCounter ++;
         displayWinsLosses();
       
-        clearInterval(x);
+        
         startGame();
-       
-
-    
     
     }
 
 
 
-
 }
 
-var x = setInterval (timeIt, 1000);
+ x = setInterval (timeIt, 1000);
 
 
-  
 
 
       }
@@ -330,20 +326,23 @@ var x = setInterval (timeIt, 1000);
       }
 
       function startGame() {
-        timerSetup();
+        clearInterval(x);
         clearQuestionsAnswers();
+        timerSetup();
+        
+        
 
-        //  timerSetup();
+     
 
         if (game.questionCounter === game.trivia.length) {
-            // alert("Trivia Complete")
+            
             $(".question").text("Game Complete!");
 
             displayWinsLosses();
             
         }
 
-
+        
 
           $(".question").text(game.trivia[game.questionCounter].question)
           for (let i=0; i < game.trivia[game.questionCounter].choices.length; i++) {
@@ -355,7 +354,7 @@ var x = setInterval (timeIt, 1000);
 
  
        
-
+            
 
 
 
@@ -372,7 +371,8 @@ var x = setInterval (timeIt, 1000);
         }
 
         $(document).on("click", ".optionsOf", function(){
-        // $(".optionsOf").on("click", function() {
+        // $(".optionsOf").on("click", function() {]
+       
             console.log("click")
 
 
@@ -384,21 +384,25 @@ console.log("answer is " + game.trivia[game.questionCounter].answer);
 
 
 if (guess === game.trivia[game.questionCounter].answer) {
+   
       alert("Correct!")
       correct ++;
       game.questionCounter ++;
       displayWinsLosses();
       
 
+     
       startGame();
 
     }
     else  {
+       
         alert("Incorrect");
       incorrect++;
       game.questionCounter ++;
       displayWinsLosses();
-      
+ 
+ 
       startGame();
 
     }
