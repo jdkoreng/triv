@@ -313,8 +313,8 @@ function timeIt() {
       
 
       function displayWinsLosses() {
-        $(".wins").text("You have guessed " + correct + " question(s) correctly");
-      $(".losses").text("You have guessed " + incorrect + " question(s) incorrectly");
+        $(".wins").text("You have answered " + correct + " question(s) correctly");
+      $(".losses").text("You have answered " + incorrect + " question(s) incorrectly");
 
       }
 
