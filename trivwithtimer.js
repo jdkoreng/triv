@@ -335,8 +335,10 @@ function timeIt() {
      
 
         if (game.questionCounter === game.trivia.length) {
+            clearInterval(x);
             
             $(".question").text("Game Complete!");
+            $(".timer").empty();
 
             displayWinsLosses();
             
