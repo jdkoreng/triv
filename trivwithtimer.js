@@ -11,7 +11,7 @@ $(document).ready(function() {
           trivia: [
 
           {
-              question: "Name of the Republic ship boarded and destroyed by Darth Malak?",
+              question: "Name of the Republic ship boarded and destroyed?",
               answer: "The Endar Spire",
               choices: [
                   "The Corellia",
